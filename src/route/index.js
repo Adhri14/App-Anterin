@@ -2,18 +2,19 @@ import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { GetStarted, Home, Notification, Setting, SignUp } from '../pages';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {BottomNavigator} from '../components';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
 const MainApp = () => {
   return (
-    <Tab.Navigator>
-    <Tab.Screen name="Home" component={Home} />
-    <Tab.Screen name="Notification" component={Notification} />
-    <Tab.Screen name="Setting" component={Setting} />
-  </Tab.Navigator>
-  )
+    <Tab.Navigator tabBar={props => <BottomNavigator {...props} />}>
+      <Tab.Screen name="Home" component={Home}  />
+      <Tab.Screen name="Notification" component={Notification} />
+      <Tab.Screen name="Setting" component={Setting} />
+    </Tab.Navigator>
+  );
 }
 
 const Route = () => {
