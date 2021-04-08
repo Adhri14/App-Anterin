@@ -13,7 +13,7 @@ import { Fonts, Colors } from '../../utils';
 const SignUp = ({ navigation }) => (
   <ScrollView>
     <View sytle={styles.page}>
-      <TouchableOpacity style={styles.btnBack}>
+      <TouchableOpacity style={styles.btnBack} onPress={() => navigation.goBack()}>
         <Back />
       </TouchableOpacity>
       <View style={styles.textContent}>
@@ -99,14 +99,15 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 10,
     backgroundColor: Colors.Background,
-    marginLeft: 40,
+    marginLeft: 20,
     marginTop: 50,
     justifyContent: 'center',
     alignItems: 'center',
   },
   textContent: {
-    marginLeft: 40,
+    marginLeft: 20,
     marginTop: 25,
+    marginBottom: 10
   },
   title: {
     fontFamily: Fonts.Semibold,
@@ -120,7 +121,7 @@ const styles = StyleSheet.create({
     color: Colors.TintColor,
   },
   wrapperInput: {
-    marginHorizontal: 40,
+    marginHorizontal: 20,
   },
   input: {
     paddingVertical: 28,
@@ -138,7 +139,7 @@ const styles = StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
-    marginLeft: 40,
+    marginLeft: 20,
   },
   textCheckbox: {
     fontFamily: Fonts.Light,
@@ -179,7 +180,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: 40,
+    paddingHorizontal: 20,
     marginVertical: 25,
   },
   line: {
@@ -198,6 +199,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    marginBottom: 20
   },
   btnOutline: {
     flexDirection: 'row',

@@ -6,4 +6,5 @@ export const Colors = {
   Outline: '#18AAFD',
   Heading: '#18009C',
   Other: '#FFFFFF',
+  Violet: '#A431FF'
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, StatusBar, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Image, ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {Fonts, Colors} from '../../utils';
 import {FB, Google, ImgBackground} from '../../assets';
@@ -7,62 +7,64 @@ import {FB, Google, ImgBackground} from '../../assets';
 const GetStarted = ({navigation}) => {
   return (
     <View style={styles.page}>
-      <StatusBar
-        translucent={true}
-        backgroundColor="transparent"
-        barStyle="dark-content"
-      />
-      <LinearGradient
-        start={{x: 0, y: 0}}
-        end={{x: 1, y: 0}}
-        style={styles.background}
-        colors={['#6631FF', '#A431FF', '#EE89FF']}>
-        <ImgBackground style={styles.ilustrasi} />
-      </LinearGradient>
-      <View style={styles.textContent}>
-        <Text style={styles.title}>Let's Get Started</Text>
-        <Text style={styles.subtitle}>Sign in to make a better</Text>
-        <Text style={styles.subtitle}>experience</Text>
-      </View>
-      <View style={styles.wrapperBtn}>
-        <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('SignUp')}>
-          <Text style={styles.textBtn}>Sign Up</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={[styles.btn, styles.btnSecondary]}>
-          <Text style={[styles.textBtn, styles.textSecondary]}>Sign In</Text>
-        </TouchableOpacity>
-      </View>
-      <View style={styles.row}>
-        <View style={styles.checkbox} />
-        <View>
-          <Text style={styles.textCheckbox}>
-            
-            By logging in or registering, I agree to the
-          
-          </Text>
-          <Text style={styles.textCheckbox}>
-            
-            <Text style={styles.unique}>Terms & Conditions</Text> and{' '}
-           {' '}
-            <Text style={styles.unique}>Privacy Policy</Text>
-          
-          </Text>
+      <ScrollView>
+        <StatusBar
+          translucent={true}
+          backgroundColor="transparent"
+          barStyle="dark-content"
+        />
+        <LinearGradient
+          start={{x: 0, y: 0}}
+          end={{x: 1, y: 0}}
+          style={styles.background}
+          colors={['#6631FF', '#A431FF', '#EE89FF']}>
+          <ImgBackground style={styles.ilustrasi} />
+        </LinearGradient>
+        <View style={styles.textContent}>
+          <Text style={styles.title}>Let's Get Started</Text>
+          <Text style={styles.subtitle}>Sign in to make a better</Text>
+          <Text style={styles.subtitle}>experience</Text>
         </View>
-      </View>
-      <View style={styles.wrapperLine}>
-        <View style={styles.line} />
-        <Text style={styles.or}>or</Text>
-        <View style={styles.line} />
-      </View>
-      <View style={styles.wrapperBtnOutline}>
-        <TouchableOpacity style={styles.btnOutline}>
-          <Google />
-          <Text style={styles.textSignUp}>Sign up with google</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.btnSecondaryOutline}>
-          <FB />
-        </TouchableOpacity>
-      </View>
+        <View style={styles.wrapperBtn}>
+          <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('SignUp')}>
+            <Text style={styles.textBtn}>Sign Up</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={[styles.btn, styles.btnSecondary]}>
+            <Text style={[styles.textBtn, styles.textSecondary]}>Sign In</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.row}>
+          <View style={styles.checkbox} />
+          <View>
+            <Text style={styles.textCheckbox}>
+              
+              By logging in or registering, I agree to the
+            
+            </Text>
+            <Text style={styles.textCheckbox}>
+              
+              <Text style={styles.unique}>Terms & Conditions</Text> and{' '}
+            {' '}
+              <Text style={styles.unique}>Privacy Policy</Text>
+            
+            </Text>
+          </View>
+        </View>
+        <View style={styles.wrapperLine}>
+          <View style={styles.line} />
+          <Text style={styles.or}>or</Text>
+          <View style={styles.line} />
+        </View>
+        <View style={styles.wrapperBtnOutline}>
+          <TouchableOpacity style={styles.btnOutline}>
+            <Google />
+            <Text style={styles.textSignUp}>Sign up with google</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.btnSecondaryOutline}>
+            <FB />
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
     </View>
   );
 };
@@ -72,6 +74,7 @@ export default GetStarted;
 const styles = StyleSheet.create({
   page: {
     flex: 1,
+    marginBottom: 20
   },
   background: {
     width: 334,
@@ -83,7 +86,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   textContent: {
-    marginLeft: 40,
+    marginLeft: 20,
     marginTop:  25,
   },
   title: {

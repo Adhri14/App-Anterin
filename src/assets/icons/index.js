@@ -9,6 +9,16 @@ import HomeOff from './HomeOff.svg';
 import NotificationOff from './NotificationOff.svg';
 import SettingOff from './SettingOff.svg';
 
+import BgBottom from './bg-bottom.svg';
+import BgTop from './bg-top.svg';
+
+import LabelCard from './label-card.svg';
+
+import Bike from './bike.svg';
+import Van from './van.svg';
+import Car from './car.svg';
+import Plane from './plane.svg';
+
 export {
   Google,
   FB,
@@ -19,4 +29,11 @@ export {
   HomeOff,
   NotificationOff,
   SettingOff,
+  BgBottom,
+  BgTop,
+  LabelCard,
+  Bike,
+  Van,
+  Car,
+  Plane
 };
