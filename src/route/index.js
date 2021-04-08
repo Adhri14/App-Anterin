@@ -20,7 +20,6 @@ const MainApp = () => {
 const Route = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="MainApp" component={MainApp} options={{headerShown: false}} />
       <Stack.Screen
         name="GetStarted"
         component={GetStarted}
@@ -31,6 +30,7 @@ const Route = () => {
         component={SignUp}
         options={{headerShown: false}}
       />
+      <Stack.Screen name="MainApp" component={MainApp} options={{headerShown: false}} />
     </Stack.Navigator>
   );
 };

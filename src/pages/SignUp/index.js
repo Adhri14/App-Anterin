@@ -7,12 +7,11 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {Back, FB, Google} from '../../assets/icons';
-import {Fonts, Colors} from '../../utils';
+import { Back, FB, Google } from '../../assets/icons';
+import { Fonts, Colors } from '../../utils';
 
-const SignUp = ({navigation}) => {
-  return (
-    <ScrollView>
+const SignUp = ({ navigation }) => (
+  <ScrollView>
     <View sytle={styles.page}>
       <TouchableOpacity style={styles.btnBack}>
         <Back />
@@ -37,21 +36,25 @@ const SignUp = ({navigation}) => {
         <TextInput
           style={styles.input}
           placeholder="Password"
-          secureTextEntry={true}
+          secureTextEntry
         />
       </View>
       <View style={styles.row}>
         <View style={styles.checkbox} />
         <View>
           <Text style={styles.textCheckbox}>
-            
-            I agree to the <Text style={styles.unique}>Terms & Conditions</Text>
-          
+
+            I agree to the
+            {' '}
+            <Text style={styles.unique}>Terms & Conditions</Text>
+
           </Text>
           <Text style={styles.textCheckbox}>
-            
-             and <Text style={styles.unique}>Privacy Policy</Text>
-          
+
+            and
+            {' '}
+            <Text style={styles.unique}>Privacy Policy</Text>
+
           </Text>
         </View>
       </View>
@@ -62,7 +65,9 @@ const SignUp = ({navigation}) => {
       </View>
       <View>
         <Text style={styles.question}>
-          Already have an account? <Text style={styles.unique}>Login</Text>
+          Already have an account?
+          {' '}
+          <Text style={styles.unique}>Login</Text>
         </Text>
       </View>
       <View style={styles.wrapperLine}>
@@ -80,9 +85,8 @@ const SignUp = ({navigation}) => {
         </TouchableOpacity>
       </View>
     </View>
-    </ScrollView>
-  );
-};
+  </ScrollView>
+);
 
 export default SignUp;
 
@@ -130,26 +134,26 @@ const styles = StyleSheet.create({
     height: 25,
     backgroundColor: Colors.PrimaryColor,
     borderRadius: 5,
-    marginRight: 20
+    marginRight: 20,
   },
   row: {
     flexDirection: 'row',
-    marginLeft: 40
+    marginLeft: 40,
   },
   textCheckbox: {
     fontFamily: Fonts.Light,
     color: '#B0B0B0',
-    fontSize: 14
+    fontSize: 14,
   },
   unique: {
     color: Colors.PrimaryColor,
-    fontFamily: Fonts.Semibold
+    fontFamily: Fonts.Semibold,
   },
   wrapperBtn: {
     marginTop: 20,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: 25
+    paddingHorizontal: 25,
   },
   btn: {
     height: 70,
@@ -158,25 +162,25 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 15,
-    marginBottom: 20
+    marginBottom: 20,
   },
   textBtn: {
     fontFamily: Fonts.Semibold,
     fontSize: 14,
-    color: Colors.Other
+    color: Colors.Other,
   },
   question: {
     fontFamily: Fonts.Light,
     color: '#B0B0B0',
     fontSize: 14,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   wrapperLine: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 40,
-    marginVertical: 25
+    marginVertical: 25,
   },
   line: {
     width: 147,
@@ -188,12 +192,12 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.Regular,
     fontSize: 14,
     color: '#B0B0B0',
-    marginHorizontal: 5
+    marginHorizontal: 5,
   },
   wrapperBtnOutline: {
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   btnOutline: {
     flexDirection: 'row',
@@ -204,18 +208,18 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     paddingVertical: 25,
     paddingHorizontal: 33,
-    marginRight: 20
+    marginRight: 20,
   },
   textSignUp: {
     marginLeft: 20,
     fontFamily: Fonts.Regular,
     fontSize: 14,
-    color: Colors.TintColor
+    color: Colors.TintColor,
   },
   btnSecondaryOutline: {
     borderColor: '#18aafd',
     borderWidth: 1,
     borderRadius: 15,
-    padding: 18
-  }
+    padding: 18,
+  },
 });
